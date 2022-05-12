@@ -15,12 +15,13 @@ app.get('/', (req, res) => {
 // DataBase Connection
 connect();
 
-
 const userRoutes = require("./routes/userRoutes")
 const postRoutes = require('./routes/postRoutes');
 
 app.use('/api', postRoutes);
 app.use('/api', userRoutes);
+
+
 
 
 const port = process.env.PORT || 5000
